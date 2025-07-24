@@ -1,9 +1,12 @@
-# Noise_Machine
+# Noise_Machine V2
 The Noise_Machine is a self contained instrument made in Pure Data
 It's designed with noise and power electronics in mind and is essentially a collection of different patches taken from different tutorials.
 It's made for a noise/power electronics project of mine, but it sounds really cool and i want to share it ✨
 
 Feel free to use it for whatever and modify it to your own needs! ✨
+
+## adc~
+Possible to run any kind of instrument or microphone through a soundcard and into the Noise Machine
 
 ## Reverb
 Made using the freeverb~ object
@@ -52,13 +55,15 @@ Turns the sound & databend object on/off
 ### Hit
 Plays the audio one (1) time
 
-## Filter
-A filter with a high resonance, goes from 40Hz up to 600Hz
-It can add some really nice textures and tons of lowend
-### Resonance
-Increases/decreases the resonance, after a certain threeshold it starts screeching and feeding back (nice)
-### Frequency
-Increases/decreases the frequency of the filter (from 40Hz up to 600Hz)
+## Complex FM oscillator
+Two sine oscillators
+Oscillator 1 modulates oscillator 2
+Feedback to FModulate oscillator 1
+
+## Wavefolder
+Wavefolder with two gain controls, post and pre gain
+The drum sequencer, sound & databand and adc~ all goes into the input of the wavefolder
+Has a display to visualize how the waveform folds
 
 ## Input trigger
 Takes the input from your soundcard or built-in mic from a laptop and adds a delay and an oscillator, after a certain threshold, for some nice textures
