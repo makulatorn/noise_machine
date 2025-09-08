@@ -1,4 +1,4 @@
-# Noise_Machine V2
+# Noise_Machine V3
 The Noise_Machine is a self contained instrument made in Pure Data
 It's designed with noise and power electronics in mind and is essentially a collection of different patches taken from different tutorials.
 It's made for a noise/power electronics project of mine, but it sounds really cool and i want to share it ✨
@@ -21,20 +21,17 @@ A lowpass filter to tame the high frequencies a bit
 ### Freeze
 Freezes the wet signal, disabling the other functions
 
-## Tapedelay
-A simple delay object inspired by tapedelays
+## Feedback loop
+A simple delay that loops for some sweet sweet feedback
+Takes whatever input you give it with the inlet but it also has an osc for extra nastyness
 ### Time
 Increases/decreases the time of the delay
-### Lowpass
-A lowpass filter
-### Highpass
-A highpass filter
+### Freq
+Sweeps between 0-127Hz (bound to change)
 ### Feedback
 Controls the feedback of the delay
-### Wet
-Controls the wet signal
-### Dry 
-Controls the dry signal
+### Vol
+Controls the volume, even though it can't really be contained 
 
 ## Sequencer
 A simple sequencer that randomly generates a new beat every 2 bar
@@ -42,7 +39,12 @@ Inside the Drum_samples subpach you can choose a .wav file for it to load and pl
 ### On/off
 Turns the sequencer on and off
 ### BPM 
-Controls the BPM of the sequencer
+Controls the BPM of the sequencerity as the sequencer, but quick and dirty 
+Also it just 4 to the floor
+
+## Kick
+A very simple oscillator that produces a kick sound
+same functional
 
 ## Sound & Databend
 Takes the binary values from any file on your PC and treats them as a list of amplitudes in an audio file
@@ -62,7 +64,7 @@ Feedback to FModulate oscillator 1
 
 ## Wavefolder
 Wavefolder with two gain controls, post and pre gain
-The drum sequencer, sound & databand and adc~ all goes into the input of the wavefolder
+Most of the different elements go through the wavefolder
 Has a display to visualize how the waveform folds
 
 ## Input trigger
